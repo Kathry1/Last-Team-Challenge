@@ -8,5 +8,5 @@ model = LogisticRegression(max_iter=200)
 model.fit(X, y)
 
 # Modell speichern
-with open("model.pkl", "wb") as f:
+with open("train_model.pkl", "wb") as f:
     pickle.dump(model, f)
