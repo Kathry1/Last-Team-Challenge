@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # Modell laden
-with open("model.pkl", "rb") as f:
+with open("train_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 app = FastAPI()
