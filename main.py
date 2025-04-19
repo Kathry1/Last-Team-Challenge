@@ -24,7 +24,12 @@ def predict(data: IrisFeatures):
     prediction = model.predict([np.array(data.features)])
     return {"prediction": int(prediction[0])}
 
-# Vorbereiteter dritter Endpunkt
-# @app.get("/status")
-# def model_status():
-#     return {"model": "ready", "version": "1.0"}
+@app.get("/status")
+def model_status():
+    return {
+        "status": "ready",
+        "model": "LogisticRegression",
+        "version": "1.0"
+    }
+
+
